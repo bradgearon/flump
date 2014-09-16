@@ -170,7 +170,7 @@ public class Movie extends Sprite
 
     /** Advances the playhead by the give number of seconds. From IAnimatable. */
     public function advanceTime (dt :Number) :void {
-        if (dt < 0) throw new Error("Invalid time [dt=" + dt + "]");
+        if (dt < 0) return;
         if (_skipAdvanceTime) { _skipAdvanceTime = false; return; }
         if (_state == STOPPED) return;
 
